@@ -1,0 +1,133 @@
+$palette: #ffffff, #e8e8e8, #e5989b, #b5838d, #6d6875, #ffcdb2;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  background: nth($palette, 2);
+
+  .container {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+
+    @media (min-width: 767px) {
+      margin-top: -5vh;
+      flex-direction: row;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      @media (min-width: 767px) {
+        width: 80%;
+      }
+
+      h1 {
+        color: nth($palette, 3);
+        margin: 2rem;
+        font-size: 1.5rem;
+
+        @media (min-width: 767px) {
+          font-size: 2rem;
+          //   margin: 0 0 2rem;
+        }
+      }
+
+      canvas {
+        width: 90%;
+        background: nth($palette, 1);
+        margin: 1rem;
+      }
+    }
+
+    aside {
+      width: 100%;
+      margin-top: 1rem;
+
+      @media (min-width: 767px) {
+        width: 30%;
+      }
+
+      input,
+      label,
+      textarea {
+        display: block;
+      }
+
+      input[type="file"] {
+        opacity: 0;
+        z-index: 1;
+        padding: 1rem 0;
+        margin: 0 auto;
+        width: 70%;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .label {
+        color: nth($palette, 3);
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 0.5rem;
+
+        &.label-radio {
+          display: inline;
+        }
+      }
+
+      .form-radio {
+        text-align: center;
+        margin: 2rem 0;
+
+        input[type="radio"] {
+          display: inline-block;
+        }
+      }
+      textarea {
+        width: 70%;
+        height: 5rem;
+        margin: 0 auto;
+        resize: none;
+        border: none;
+        padding: 1.5rem;
+        font-size: 1rem;
+        color: nth($palette, 5);
+
+        &:focus {
+          outline-color: nth($palette, 6);
+        }
+      }
+
+      .button {
+        background: nth($palette, 3);
+        color: nth($palette, 1);
+        position: relative;
+        top: 3rem;
+        padding: 1rem;
+        text-align: center;
+        width: 70%;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 0 auto;
+
+        &:hover,
+        &.hover {
+          background: nth($palette, 4);
+        }
+      }
+    }
+  }
+}

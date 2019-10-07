@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="script.js" defer async></script>
+    <title>Adding subtitle</title>
+  </head>
+  <body>
+    <div class="container">
+      <section>
+        <h1>Add subtitle to your photo</h1>
+        <canvas id="canvas">
+          Your browser does not support the canvas element.
+        </canvas>
+      </section>
+      <aside>
+        <form>
+          <label id="img-input-label" class="button">Select photo</label>
+          <input id="img-input" type="file" accept="image/png, image/jpeg" />
+        </form>
+        <form class="form-radio">
+          <label class="label">Select color:</label>
+          <input type="radio" name="color" value="black" checked />
+          <label class="label label-radio" for="black">Black</label>
+          <input type="radio" name="color" value="white" />
+          <label class="label label-radio" for="white">White</label>
+        </form>
+        <form>
+          <label class="label">Type here:</label>
+          <textarea id="text-input" maxlength="25"></textarea>
+        </form>
+        <a id="download"><div class="button">Download image</div></a>
+      </aside>
+    </div>
+  </body>
+</html>
